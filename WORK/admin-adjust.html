@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>成功下单</title>
+<meta charset="utf-8">
+<style>
+div[type="outer"]
+{
+    position:relative;
+}
+ul[type="nav"] 
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+	height:60px;
+	width:100%;
+	position:static;
+}
+div[type="navigate"]
+{
+    position:static;
+}
+li 
+{
+    float: left;
+}
+
+li a[type="navi"] {
+    display: block;
+    color: grey;
+    text-align: center;
+    padding-top: 20% ;
+	padding-left:5%;
+	//padding-right:5%;
+    text-decoration: none;
+	height:60px;
+	width:90px;
+}
+
+.three1
+{
+    position:relative;
+    margin-left:65%;
+	margin-top:1.4%;
+}
+.three2
+{
+	//margin-top:1.4%;
+	position:relative;
+}
+li a:hover[type="navi"]  
+{
+    background-color: #C0D9D9;
+}
+
+div[type="navigate"]
+{
+    position:static;
+}
+.p1
+{
+    //display:block;
+	//position:static;
+	width:100%;
+	height:70px;
+	//background-color:black;
+	
+}
+.UserAdmin{
+
+    //margin-top:55px;
+    //position:absolute;
+	//padding-top:5px;
+    background-color:#87CEFF;
+    color: white;
+    width:100%;
+	height:70px;
+    font-size:1.1em;
+    border: none;
+    cursor: pointer;
+	text-align:center;
+	letter-spacing:0.1em;
+}
+.p1:hover .UserAdmin {
+    background-color:#00BFFF;
+}
+
+.p11
+{
+	//display:block;
+	//margin-top:137px;
+	//position:absolute;
+	width:100%;
+	height:50px;
+	
+}
+.function1{
+    //margin-top:120px;
+	//padding-top:3px;
+	//position:absolute;
+    background-color: #4CAF50;
+    color: white;
+    width:100%;
+	height:50px;
+    font-size:1.1em;
+    border: none;
+    cursor: pointer;
+	text-align:center;
+	letter-spacing:0.1em;
+}
+.p11:hover .function1 {
+    background-color: #3e8e41;
+}
+.maincontent
+{
+    background-color:#FFFFF0;
+	float:left;
+	width:84%;
+	height:1000px;
+}
+.qwerty
+{
+    border-color: #ADD8E6;
+}
+</style>
+<script>
+var i=-10001;
+var j=-10001;
+function show(id)
+{
+    document.getElementById("content1").style.display="none"
+    document.getElementById("content2").style.display="none"
+    document.getElementById("content3").style.display="none"
+    document.getElementById("content4").style.display="none"
+    document.getElementById("content5").style.display="none"
+    document.getElementById("content6").style.display="none"
+    document.getElementById(id).style.display=""
+}
+function showbutton1()
+{
+    if(i%2==0)
+	{
+	    document.getElementById("fun1").style.display=""
+        document.getElementById("fun2").style.display=""
+        document.getElementById("fun3").style.display=""
+	}
+	else
+	{
+	    document.getElementById("fun1").style.display="none"
+        document.getElementById("fun2").style.display="none"
+        document.getElementById("fun3").style.display="none"
+	}
+	i=i+1;
+}
+function showbutton2()
+{
+    if(j%2==0)
+	{
+	    document.getElementById("fun11").style.display=""
+        document.getElementById("fun21").style.display=""
+        document.getElementById("fun31").style.display=""
+	}
+	else
+	{
+	    document.getElementById("fun11").style.display="none"
+        document.getElementById("fun21").style.display="none"
+        document.getElementById("fun31").style.display="none"
+	}
+	j=j+1;
+}
+</script>
+</head>
+<body>
+<div type="outer" style="position:relative;">
+ 
+   
+   <div type="navigate">
+   <ul type="nav">
+   <li><a href=""><img src="small-logo.jpg" height="60px" width="100%"></a></li>
+   
+   <li class="three1"><font color="grey">adminididid &nbsp &nbsp </font> </li>
+   <li class="three2"><a href="" type="navi" ><font color="grey">退出登录  &nbsp  </font></a></li>
+   
+   </ul> 
+   </div>
+   
+   <div type="split" style="position:static">
+   <hr align="center" width="100%" size="1" color="#EAADEA">
+   </div>
+   <div type="mainbody" style="position:static;width:100%;height:1000px;">
+   
+   <div type="leftside" style="float:left;width:16%;height:1000px;">
+   
+   <div class="p1">
+   <button class="UserAdmin" onclick="showbutton1()">用户管理</button></div>
+  
+   
+   <div class="p11">
+   <button class="function1" onclick="show('content1')" id="fun1">显示所有用户信息</button></div>
+   
+   <div class="p11">
+   <button class="function1" onclick="show('content2')" id="fun2">功能2</button></div>
+   
+   <div class="p11">
+   <button class="function1" onclick="show('content3')" id="fun3">功能3</button></div>
+   
+   <div class="p1">
+   <button class="UserAdmin" onclick="showbutton2()">房屋管理</button></div>
+   
+   <div class="p11">
+   <button class="function1" onclick="show('content4')" id="fun11">审核房屋</button></div>
+   
+   <div class="p11">
+   <button class="function1" onclick="show('content5')" id="fun21">显示所有房屋信息</button></div>
+
+   <div class="p11">
+   <button class="function1" onclick="show('content6')" id="fun31">功能31</button></div>
+    
+   </div>
+   
+   <div class="maincontent" id="content1">
+   <table type="alluser" width="100%" border="1" cellspacing="1" 
+  cellpadding="4" align="center"
+  style="margin-left:0;word-wrap:break-word; word-break:break-all;border-collapse:collapse;border-color: #ADD8E6;">
+					<tr height="40" style="text-align: center;">
+						<td width="15%" class="qwerty">用户名</td>
+						<td width="15%" class="qwerty">UID</td>
+						<td width="15%" class="qwerty">真实姓名</td>
+						<td width="10%" class="qwerty">性别</td>
+						<td width="15%" class="qwerty">密码</td>
+						<td width="15%" class="qwerty">邮箱</td>
+						<td width="15%" class="qwerty">手机</td>
+						
+					</tr>
+					<tr><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"></tr>
+					<tr><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"></tr>
+</table>
+   </div>
+   
+ 
+   <div class="maincontent" id="content2">
+   faaf
+   </div>
+   
+   <div class="maincontent" id="content3">
+   afasfaf
+   </div>
+   
+   <div class="maincontent" id="content4">
+   fafaf
+   </div>
+   
+   <div class="maincontent" id="content5">
+   <table width="100%" border= "1" cellspacing="1" 
+  cellpadding="4" align="center"
+  style="margin-left:0;word-wrap:break-word; word-break:break-all;border-collapse:collapse;border-color: #ADD8E6;">
+					<tr height="40" style="text-align:center;">
+						<td width="15%" class="qwerty">房屋ID</td>
+						<td width="15%" class="qwerty">房屋名</td>
+						<td width="5%" class="qwerty">所在城市</td>
+						<td width="15%" class="qwerty">房东</td>
+						<td width="15%" class="qwerty">租客</td>
+						<td width="5%" class="qwerty">状态</td>
+						<td width="30%" class="qwerty">详细信息</td>
+						
+					</tr>
+					<tr><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"></tr>
+					<tr><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"><td class="qwerty"></tr>
+</table>
+   </div>
+   
+   <div class="maincontent" id="content6">
+   wdwwd
+   </div>
+   
+   </div>
+   
+</div>
+
+</body>
+</html>
