@@ -1,0 +1,310 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+  <head>
+    <title>page1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	<script type="text-javascript">
+	function submit()
+{
+   
+	{
+	    document.regist.submit();
+	}
+	
+}
+	</script>
+	<style type="text/css">
+	*
+	{
+	    margin:0;
+		padding:0;
+	}
+	div[type="outer"]
+{
+    position:relative;
+	
+}
+	.nav
+	{
+	    width:100%;
+		height:60px;
+		//background-color:red;
+		position:static;
+	}
+	.logo
+	{
+	    width:12%;
+		height:60px;
+		float:left;
+	}
+	.ididid
+	{
+	    margin-left:59%;
+		height:60px;
+		width:9%;
+		float:left;
+		line-height:60px;
+		text-align:left;
+		color:grey;
+		font-size:1em;
+	}
+	.quit
+	{
+	    //margin-left:59%;
+		height:60px;
+		width:9%;
+		float:left;
+		line-height:60px;
+		text-align:center;
+		color:grey;
+		font-size:1em;
+	}
+	#navigate:hover
+	{
+	    background-color:#CDBA96;
+	}
+
+div[type="reg"]{
+    background:#009FCC;
+    font-size:24px;
+    padding:5px;
+    color:white;
+}
+form[type="houseinfo"]{
+    background: #F8F8FF ;
+    border:#357FC4 solid 1px;
+	border-bottom-color:white;
+    color:#575454;  
+    width:500px;
+    margin-top:120px ;
+	margin-left:160px;
+    font-size:15px;
+	position:static;
+}
+table
+{
+    margin-left:5px;
+	cellspacing:0;
+	cellpadding:0;
+}
+
+input[type="text"]
+{
+    width:200px;
+}
+td[type="click"]
+{
+  
+}
+	</style>
+	 </head>
+   <body>
+   <div type="outer">
+   <div class="nav">
+
+   <a href=""><div class="logo"><img src="" height="60px" width="100%"></div></a>
+   <div class="ididid" id="navigate1">欢迎xxx </div>
+   <a href=""><div class="quit" id="navigate">个人中心</div></a>
+   <a href=""><div class="quit" id="navigate">退出登录</div></a>
+   </div>
+   
+   <div type="pic" style="position:absolute;z-index:-1;width:100%;height:100%;">
+    	<img src="house-info-background.jpg" width="100%" height="100%"/>
+   </div>
+   <form type="houseinfo">
+   <div type="reg">房屋信息</div>
+   <table cellspacing="15px">
+    <tr><td class="login_td" colspan="1">房屋名称</td><td class="login_td" colspan="1"><input type="text" name="NAME" value=""></td></tr>
+	<tr><td class="login_td" colspan="1">所在城市</td><td class="login_td" colspan="1"><input type="text" name="provinceCITY" value=""></td></tr>
+    <tr><td class="login_td" colspan="1">价格（元/天）</td><td class="login_td" colspan="1"><input type="text" name="price" value=""></td></tr>
+    <!--<tr><td class="login_td" colspan="1">租给几人</td><td class="login_td" colspan="1">
+	<select name="sel">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">>=3</option>
+    </select>
+	</td></tr>
+	-->
+	<tr><td class="login_td">开放时间</td>
+	<td class="login_td">
+	<select name="year1">
+	<option value="2018">2018</option>
+	<option value="2019">2019</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	</select>
+	<select name="month1">
+	<option value="1m">1</option>
+	<option value="2m">2</option>
+	<option value="3m">3</option>
+	<option value="4m">4</option>
+	<option value="5m">5</option>
+	<option value="6m">6</option>
+	<option value="7m">7</option>
+	<option value="8m">8</option>
+	<option value="9m">9</option>
+	<option value="10m">10</option>
+	<option value="11m">11</option>
+	<option value="12m">12</option>
+	</select>
+	<select name="day1">
+	<option value="1d">1</option>
+	<option value="2d">2</option>
+	<option value="3d">3</option>
+	<option value="4d">4</option>
+	<option value="5d">5</option>
+	<option value="6d">6</option>
+	<option value="7d">7</option>
+	<option value="8d">8</option>
+	<option value="9d">9</option>
+	<option value="10d">10</option>
+	<option value="11d">11</option>
+	<option value="12d">12</option>
+	<option value="13d">13</option>
+	<option value="14d">14</option>
+	<option value="15d">15</option>
+	<option value="16d">16</option>
+	<option value="17d">17</option>
+	<option value="18d">18</option>
+	<option value="19d">19</option>
+	<option value="20d">20</option>
+	<option value="21d">21</option>
+	<option value="22d">22</option>
+	<option value="23d">23</option>
+	<option value="24d">24</option>
+	<option value="25d">25</option>
+	<option value="26d">26</option>
+	<option value="27d">27</option>
+	<option value="28d">28</option>
+	<option value="29d">29</option>
+	<option value="30d">30</option>
+	<option value="31d">31</option>
+	</select>
+	--
+	<select name="year2">
+	<option value="2018">2018</option>
+	<option value="2019">2019</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	</select>
+	<select name="month2">
+	<option value="1M">1</option>
+	<option value="2M">2</option>
+	<option value="3M">3</option>
+	<option value="4M">4</option>
+	<option value="5M">5</option>
+	<option value="6M">6</option>
+	<option value="7M">7</option>
+	<option value="8M">8</option>
+	<option value="9M">9</option>
+	<option value="10M">10</option>
+	<option value="11M">11</option>
+	<option value="12M">12</option>
+	</select>
+	<select name="day2">
+	<option value="1D">1</option>
+	<option value="2D">2</option>
+	<option value="3D">3</option>
+	<option value="4D">4</option>
+	<option value="5D">5</option>
+	<option value="6D">6</option>
+	<option value="7D">7</option>
+	<option value="8D">8</option>
+	<option value="9D">9</option>
+	<option value="10D">10</option>
+	<option value="11D">11</option>
+	<option value="12D">12</option>
+	<option value="13D">13</option>
+	<option value="14D">14</option>
+	<option value="15D">15</option>
+	<option value="16D">16</option>
+	<option value="17D">17</option>
+	<option value="18D">18</option>
+	<option value="19D">19</option>
+	<option value="20D">20</option>
+	<option value="21D">21</option>
+	<option value="22D">22</option>
+	<option value="23D">23</option>
+	<option value="24D">24</option>
+	<option value="25D">25</option>
+	<option value="26D">26</option>
+	<option value="27D">27</option>
+	<option value="28D">28</option>
+	<option value="29D">29</option>
+	<option value="30D">30</option>
+	<option value="31D">31</option>
+	</select>
+	
+	</td></tr>
+	<!--
+    <tr><td class="login_td" colspan="1">位置</td>
+	<td class="login_td" colspan="1" type="pos1">
+	<form>
+    <input type="checkbox" name="pos" value="CBD">CBD</br>
+    <input type="checkbox" name="pos" value="transport">交通枢纽</br>
+	<input type="checkbox" name="pos" value="scenery">景点</br>
+    <input type="checkbox" name="pos" value="school">学校</br>
+    <input type="checkbox" name="pos" value="hospital">医院</br>
+	<input type="checkbox" name="pos" value="mall">商场</br>
+	</form>
+	</td>
+	-->
+	
+
+	</tr>
+    <tr><td class="login_td" colspan="1">房型</td><td class="login_td">
+	<select name="sel">
+    <option value="1a">公寓</option>
+    <option value="2a">别墅</option>
+    <option value="3a">客栈</option>
+    <option value="4a">写字楼</option>
+    </select>
+	</td>
+	</tr>   
+	
+    <tr><td class="login_td">独立空间</td><td class="login_td">
+	<select name="sel">
+    <option value="1b">无</option>
+    <option value="2b">独立卫浴</option>
+    <option value="3b">一人一间房</option>
+    </select>
+	</td>
+	</tr>
+	
+	<tr><td class="login_td" colspan="1">详细地址</td>
+	<td class="login_td"> <textarea name="detailedAddress" cols="22" rows="12"></textarea>
+	</td>
+	</tr>
+	
+	<tr><td class="login_td" colspan="1">详细信息</td>
+	<td class="login_td"> <textarea name="details" cols="22" rows="22"></textarea>
+	</td>
+	</tr>
+    <!--
+	<tr><td class="login_td" colspan="1">房客守则</td>
+	<td class="login_td"> <textarea name="introduction" cols="22" rows="10"></textarea>
+	</td>
+	</tr>
+	
+	<tr><td class="login_td" colspan="1">详细地址</td>
+	<td class="login_td"> <textarea name="introduction" cols="22" rows="10"></textarea>
+	</td>
+	</tr>
+	-->
+	<tr>
+	<td></td>
+    
+	<td type="click">
+	<button class="login_button" type="button1">发布</button> &nbsp <button class="login_button" type="button1">返回</button>
+	</td>
+	</tr>
+	</table>
+</form>		
+   
+   </div>
+  </body>
+</html>

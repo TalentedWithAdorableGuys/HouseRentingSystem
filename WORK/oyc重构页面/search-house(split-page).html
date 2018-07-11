@@ -1,0 +1,741 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+  <head>
+    <title>page1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <script type="text/javascript">
+	//global variables
+	 var CurrentPage=1;
+	 var MinPage=1;
+	 var MaxPage=4;//needs coolboymu to config it via database.
+	//initialize params
+	window.onload=function()
+	{   
+	    if(CurrentPage==MinPage)
+		{
+		    document.getElementById("small").disabled=true;
+		}
+		else
+		{
+		    document.getElementById("small").disabled=false;
+		}
+		if(CurrentPage==MaxPage)
+		{
+		    document.getElementById("big").disabled=true;
+		}
+		else
+		{
+		    document.getElementById("big").disabled=false;
+		}
+	    document.getElementById("inputpage").value=CurrentPage;
+	}
+
+	function back()
+	{    
+	    CurrentPage=CurrentPage-1;
+		//change the number in the "input" box
+		document.getElementById("inputpage").value=CurrentPage;
+		//judge whether the button should be disabled
+		if(CurrentPage==MinPage)
+		{
+		    document.getElementById("small").disabled=true;
+		}
+		else
+		{
+		    document.getElementById("small").disabled=false;
+		}
+		if(CurrentPage==MaxPage)
+		{
+		    document.getElementById("big").disabled=true;
+		}
+		else
+		{
+		    document.getElementById("big").disabled=false;
+		}
+		//jump to an area in the page
+		window.location.hash="#JumpToPhoto";
+		
+		//TODO
+		
+	}
+	function forth()
+	{   
+	    CurrentPage=CurrentPage+1;
+		document.getElementById("inputpage").value=CurrentPage;
+	    if(CurrentPage==MinPage)
+		{
+		    document.getElementById("small").disabled=true;
+		}
+		else
+		{
+		    document.getElementById("small").disabled=false;
+		}
+		if(CurrentPage==MaxPage)
+		{
+		    document.getElementById("big").disabled=true;
+		}
+		else
+		{
+		    document.getElementById("big").disabled=false;
+		}
+	    window.location.hash="#JumpToPhoto";
+		
+		//TODO
+		
+	}
+    </script>
+    <style type="text/css">
+	*
+	{
+	    margin:0px;
+		padding:0px;
+	}
+div[type="outer"]
+{
+    position:relative;
+}
+.nav
+	{
+	    width:100%;
+		height:60px;
+		//background-color:red;
+		position:static;
+	}
+	.logo
+	{
+	    width:12%;
+		height:60px;
+		float:left;
+	}
+	.ididid
+	{
+	    margin-left:59%;
+		height:60px;
+		width:9%;
+		float:left;
+		line-height:60px;
+		text-align:left;
+		color:grey;
+		font-size:1em;
+	}
+	.quit
+	{
+	    //margin-left:59%;
+		height:60px;
+		width:9%;
+		float:left;
+		line-height:60px;
+		text-align:center;
+		color:grey;
+		font-size:1em;
+	}
+	#navigate:hover
+	{
+	    background-color:#E0E0E0;
+	}
+
+div[type="foot"]
+{
+    margin-top:5%;
+	//margin-left:4.8%;
+	position:static;
+    height:150px;
+	width:100%;
+	text-align:left;
+	color:white;
+	font-size:1em;
+	background-color:#696969;
+}
+.tbl1
+{
+    text-align:left;
+	width:25%;
+}
+.tbl2
+{
+    text-align:left;
+	width:20%;
+}
+.tbl3
+{
+    text-align:left;
+	width:15%;
+}
+.tbl4
+{
+    text-align:left;
+	width:15%;
+}
+.tbl5
+{
+    text-align:left;
+	width:12.5%;
+}
+.tbl6
+{
+    text-align:left;
+	width:12.5%;
+}
+a
+{
+    text-decoration:none;
+}
+div[type="split"]
+{
+    margin-top:0;
+	position:static;
+	width:100%;
+	
+}
+div[type="searchblank"]
+{
+    position:static;
+	width:100%;
+	height:65px;
+	background-color:#EEE9E9;
+	
+}
+div[type="destination"]
+{
+    height:65px;
+	width:20%;
+	margin-left:2%;
+	//background-color:red;
+	text-align:center;
+	line-height:65px;
+	font-size:0.95em;
+	//letter-spacing:0.05em;
+	float:left;
+}
+div[type="date"]
+{
+    height:65px;
+	width:35%;
+	//background-color:pink;
+	text-align:left;
+	line-height:65px;
+	font-size:0.95em;
+
+	float:left;
+}
+div[type="pricerange"]
+{
+    height:65px;
+	width:32%;
+	//background-color:green;
+	text-align:left;
+	line-height:65px;
+	font-size:0.95em;
+
+	float:left;
+}
+div[type="sousuo"]
+{
+    height:65px;
+	width:11%;
+	//background-color:green;
+	text-align:left;
+	//line-height:65px;
+	//font-size:0.95em;
+	float:left;
+}
+
+#dest
+{
+    width:50%;
+	height:55%;
+}
+.ran
+{
+    width:27.5%;
+	height:55%;
+}
+select[type="YEAR"]
+{
+    width:14.5%;
+	height:55%;
+}
+select[type="MONTH"]
+{
+    width:10%;
+	height:55%;
+}
+select[type="DAY"]
+{
+    width:10%;
+	height:55%;
+	//font-size:1em;
+}
+
+.seaRCH
+{
+    height:55%;
+	width:54%;
+	font-size:1em;
+	margin-top:10%;
+	border:1px solid #64c878;
+	color:white;
+	background-color:#3CB371;
+	cursor:pointer;
+}
+.seaRCH:hover
+{
+    background-color:#228B22;
+}
+
+div[type="split1"]
+{
+    //margin-top:5px;
+	position:static;
+	width:100%;
+}
+
+div[type="res"]
+{
+    margin-top:15px;
+	margin-left:5%;
+	position:static;
+	width:95%;
+	height:30px;
+	font-size:0.95em;
+	//background-color:red;
+	line-height:30px;
+}
+div[type="photoarea"]
+{
+    margin-left:5%;
+	margin-right:5%;
+	margin-top:15px;
+	height:960px;
+	//background-color:red;
+	position:static;
+}
+.pic
+{
+    float:left;
+	height:320px;
+	width:32%;
+	margin-left:2%;
+	//background-color:pink;
+}
+.pic1
+{
+    float:left;
+	height:320px;
+	width:32%;
+	//margin-left:2%;
+	//background-color:pink;
+}
+.p1
+{
+    width:100%;
+	height:250px;
+}
+.p2
+{
+    width:100%;
+	height:70px;
+	background-color: #EEE9E9;
+}
+.tbl
+{
+    width:100%;
+	height:70px;
+}
+a
+{
+    text-decoration:none;
+	color:grey;
+}
+div[type="changepage"]
+{
+    margin-left:40%;
+	margin-top:35px;
+	width:20%;
+	background-color:#EEE5DE;
+	position:static;
+}
+.PAGE
+{
+    width:11.8%;
+}
+
+.b1
+{
+    background-color:#CDC5BF;
+	//cursor:pointer;
+	height:50px;
+	width:20%;
+	font-size:1em;
+	border:none;
+	cursor:pointer;
+}
+.b1:hover
+{
+    background-color:#8B8682
+}
+  </style>
+  </head>
+  <body width="100%">
+   <div type="outer">
+   
+    
+   <div class="nav">
+
+   <a href=""><div class="logo"><img src="" height="60px" width="100%"></div></a>
+   <!-- 点击logo返回首页!!!-->
+   <div class="ididid" id="navigate1">欢迎xxx</div>
+   <a href=""><div class="quit" id="navigate">个人中心</div></a>
+   <a href=""><div class="quit" id="navigate">退出登录</div></a>
+   </div>
+   
+   
+   <div type="split">
+   <hr align="center" width="100%" size="1" color="#CDC9C9">
+    </div>
+   
+   <div type="searchblank">
+   
+   <div type="destination">目的地: <input type="text" placeholder="北京" id="dest">
+   </div>
+   
+   <div type="date">租房日期:
+   <select name="year1" type="YEAR">
+	<option value="2018">2018</option>
+	<option value="2019">2019</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	</select>
+	<select name="month1" type="MONTH">
+	<option value="1m">1</option>
+	<option value="2m">2</option>
+	<option value="3m">3</option>
+	<option value="4m">4</option>
+	<option value="5m">5</option>
+	<option value="6m">6</option>
+	<option value="7m">7</option>
+	<option value="8m">8</option>
+	<option value="9m">9</option>
+	<option value="10m">10</option>
+	<option value="11m">11</option>
+	<option value="12m">12</option>
+	</select>
+	<select name="day1" type="DAY">
+	<option value="1d">1</option>
+	<option value="2d">2</option>
+	<option value="3d">3</option>
+	<option value="4d">4</option>
+	<option value="5d">5</option>
+	<option value="6d">6</option>
+	<option value="7d">7</option>
+	<option value="8d">8</option>
+	<option value="9d">9</option>
+	<option value="10d">10</option>
+	<option value="11d">11</option>
+	<option value="12d">12</option>
+	<option value="13d">13</option>
+	<option value="14d">14</option>
+	<option value="15d">15</option>
+	<option value="16d">16</option>
+	<option value="17d">17</option>
+	<option value="18d">18</option>
+	<option value="19d">19</option>
+	<option value="20d">20</option>
+	<option value="21d">21</option>
+	<option value="22d">22</option>
+	<option value="23d">23</option>
+	<option value="24d">24</option>
+	<option value="25d">25</option>
+	<option value="26d">26</option>
+	<option value="27d">27</option>
+	<option value="28d">28</option>
+	<option value="29d">29</option>
+	<option value="30d">30</option>
+	<option value="31d">31</option>
+	</select>
+	
+	--
+	<select name="year2" type="YEAR">
+	<option value="2018">2018</option>
+	<option value="2019">2019</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	</select>
+	<select name="month2" type="MONTH">
+	<option value="1M">1</option>
+	<option value="2M">2</option>
+	<option value="3M">3</option>
+	<option value="4M">4</option>
+	<option value="5M">5</option>
+	<option value="6M">6</option>
+	<option value="7M">7</option>
+	<option value="8M">8</option>
+	<option value="9M">9</option>
+	<option value="10M">10</option>
+	<option value="11M">11</option>
+	<option value="12M">12</option>
+	</select>
+	<select name="day2" type="DAY">
+	<option value="1D">1</option>
+	<option value="2D">2</option>
+	<option value="3D">3</option>
+	<option value="4D">4</option>
+	<option value="5D">5</option>
+	<option value="6D">6</option>
+	<option value="7D">7</option>
+	<option value="8D">8</option>
+	<option value="9D">9</option>
+	<option value="10D">10</option>
+	<option value="11D">11</option>
+	<option value="12D">12</option>
+	<option value="13D">13</option>
+	<option value="14D">14</option>
+	<option value="15D">15</option>
+	<option value="16D">16</option>
+	<option value="17D">17</option>
+	<option value="18D">18</option>
+	<option value="19D">19</option>
+	<option value="20D">20</option>
+	<option value="21D">21</option>
+	<option value="22D">22</option>
+	<option value="23D">23</option>
+	<option value="24D">24</option>
+	<option value="25D">25</option>
+	<option value="26D">26</option>
+	<option value="27D">27</option>
+	<option value="28D">28</option>
+	<option value="29D">29</option>
+	<option value="30D">30</option>
+	<option value="31D">31</option>
+	</select>
+   </div>
+   
+   <div type="pricerange">价格范围(元/天):
+   <input type="text" class="ran">-- <input type="text" class="ran">
+   </div>
+   
+   <div type="sousuo"><button type="submit"  class="seaRCH">搜索</button></div>
+   
+   </div>
+  
+   <div type="split1" id="JumpToPhoto">
+   <hr align="center" width="100%" size="1" color="#CDC9C9">
+   </div>
+   
+   <div type="res" >已找到<font color="#FF3030">8</font>套符合要求的房屋</div>
+   
+   <div type="photoarea" >
+   
+   <a href=""><div class="pic1">
+   
+   <div class="p1"><img src="house2.jpg" style="height:250px;width:100%;"></div>
+   <div class="p2">
+   
+   <table class="tbl">
+   <tr>
+   <td width="50%">xxxxxx</td>
+   <td width="50%">xxxxxx</td>
+   </tr>
+   <tr>
+   <td width="50%">yyyyyyy</td>
+   <td width="50%">zzzzzzz</td>
+   </tr>
+   </table>
+   
+   </div>
+   </div>
+   </a>
+   
+    <a href=""><div class="pic">
+   
+   <div class="p1"><img src="house2.jpg" style="height:250px;width:100%;"></div>
+   <div class="p2">
+   
+   <table class="tbl">
+   <tr>
+   <td width="50%">xxxxxx</td>
+   <td width="50%">xxxxxx</td>
+   </tr>
+   <tr>
+   <td width="50%">yyyyyyy</td>
+   <td width="50%">zzzzzzz</td>
+   </tr>
+   </table>
+   
+   </div>
+   </div>
+   </a>
+   
+    <div class="pic"><a href="">
+   
+   <div class="p1"><img src="house2.jpg" style="height:250px;width:100%;"></div>
+   <div class="p2">
+   
+   <table class="tbl">
+   <tr>
+   <td width="50%">xxxxxx</td>
+   <td width="50%">xxxxxx</td>
+   </tr>
+   <tr>
+   <td width="50%">yyyyyyy</td>
+   <td width="50%">zzzzzzz</td>
+   </tr>
+   </table>
+   
+   </div>
+   </div>
+   </a>
+   
+    <a href=""><div class="pic1">
+   
+   <div class="p1"><img src="house2.jpg" style="height:250px;width:100%;"></div>
+   <div class="p2">
+   
+   <table class="tbl">
+   <tr>
+   <td width="50%">xxxxxx</td>
+   <td width="50%">xxxxxx</td>
+   </tr>
+   <tr>
+   <td width="50%">yyyyyyy</td>
+   <td width="50%">zzzzzzz</td>
+   </tr>
+   </table>
+   
+   </div>
+   </div>
+   </a>
+   
+   <a href=""><div class="pic">
+   
+   <div class="p1"><img src="house2.jpg" style="height:250px;width:100%;"></div>
+   <div class="p2">
+   
+   <table class="tbl">
+   <tr>
+   <td width="50%">xxxxxx</td>
+   <td width="50%">xxxxxx</td>
+   </tr>
+   <tr>
+   <td width="50%">yyyyyyy</td>
+   <td width="50%">zzzzzzz</td>
+   </tr>
+   </table>
+   
+   </div>
+   </div>
+   </a>
+   
+   <a href=""><div class="pic">
+   
+   <div class="p1"><img src="house2.jpg" style="height:250px;width:100%;"></div>
+   <div class="p2">
+   
+   <table class="tbl">
+   <tr>
+   <td width="50%">xxxxxx</td>
+   <td width="50%">xxxxxx</td>
+   </tr>
+   <tr>
+   <td width="50%">yyyyyyy</td>
+   <td width="50%">zzzzzzz</td>
+   </tr>
+   </table>
+   
+   </div>
+   </div>
+   </a>
+   
+   
+    <a href=""><div class="pic1">
+   
+   <div class="p1"><img src="house2.jpg" style="height:250px;width:100%;"></div>
+   <div class="p2">
+   
+   <table class="tbl">
+   <tr>
+   <td width="50%">xxxxxx</td>
+   <td width="50%">xxxxxx</td>
+   </tr>
+   <tr>
+   <td width="50%">yyyyyyy</td>
+   <td width="50%">zzzzzzz</td>
+   </tr>
+   </table>
+   
+   </div>
+   </div>
+   </a>
+   
+   
+   <a href=""><div class="pic">
+   
+   <div class="p1"><img src="house2.jpg" style="height:250px;width:100%;"></div>
+   <div class="p2">
+   
+   <table class="tbl">
+   <tr>
+   <td width="50%">xxxxxx</td>
+   <td width="50%">xxxxxx</td>
+   </tr>
+   <tr>
+   <td width="50%">yyyyyyy</td>
+   <td width="50%">zzzzzzz</td>
+   </tr>
+   </table>
+   
+   </div>
+   </div>
+   </a>
+   
+   </div>
+
+<div type="changepage"><button class="b1"  id="small" onclick="back()" disabled="true"> back</button> &nbsp &nbsp
+当前为第<input type="text" class="PAGE" value="" readonly="true" id="inputpage">页 &nbsp &nbsp
+<button class="b1"  id="big" onclick="forth()"> forth </button>
+</div> 
+   
+
+<div type="foot">
+   
+<table width="84%" style="margin-left:8%;">
+<tr>
+<th class="tbl1">联系我们</th>
+<th class="tbl2">帮助中心</th>
+<th class="tbl3">公司信息</th>
+<th class="tbl4">合作网站</th>
+<th class="tbl5">扫码抽奖</th>
+<th class="tbl6"> APP下载</th>
+</tr>
+<tr>
+<td class="tbl1">QQ:459014917</td>
+<td class="tbl2">房屋审核规范</td>
+<td class="tbl3">免责声明</td>
+<td class="tbl4">蚂蚁短租</a></td>
+<td rowspan="3" class="tbl5"><img src="<%=basePath%>/images/erwei1.png" height="100px" width="80%"></td>
+<td rowspan="3" class="tbl6"><img src="<%=basePath%>/images/erwei.png" height="100px" width="80%"></td>
+</tr>
+<tr>
+<td>Wxid:SuperStrikerM10</td>
+<td>房客帮助手册</td>
+<td>加入我们</td>
+<td>AirBnb</td>
+</tr>
+<tr>
+<td class="tbl1">Tel:18813913873</td>
+<td class="tbl2">优质住房计划</td>
+<td class="tbl3">服务协议</td>
+<td class="tbl4">58同城</td>
+</tr>
+
+
+</table>
+
+
+ </div>
+
+ </div>
+  </body>
+</html>

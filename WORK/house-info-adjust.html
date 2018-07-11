@@ -1,0 +1,374 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+  <head>
+    <title>page1</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+	<script>
+	//"我要下单"按钮触发事件,打开"订单成功"页面。
+	function order()
+	{
+	    window.open("order_success.html");
+	}
+	</script>
+    <style>
+div[type="outer"]
+{
+    position:relative;
+	
+}
+*
+	{
+	    margin:0;
+		padding:0;
+	}
+	.nav
+	{
+	    width:100%;
+		height:60px;
+		//background-color:red;
+		position:static;
+	}
+	.logo
+	{
+	    width:12%;
+		height:60px;
+		float:left;
+	}
+	.ididid
+	{
+	    margin-left:59%;
+		height:60px;
+		width:9%;
+		float:left;
+		line-height:60px;
+		text-align:left;
+		color:grey;
+		font-size:1em;
+	}
+	.quit
+	{
+	    //margin-left:59%;
+		height:60px;
+		width:9%;
+		float:left;
+		line-height:60px;
+		text-align:center;
+		color:grey;
+		font-size:1em;
+	}
+	#navigate:hover
+	{
+	    background-color:#E0E0E0;
+	}
+
+div[type="houseTitle"]
+{
+    margin-top:1%;
+	margin-left:1.5%;
+	position:static;
+}
+p[type="houseNAME"]
+{
+    font-size:1.2em;
+}
+p[type="houseADDR"]
+{
+    font-size:0.9em;
+	color:grey;
+}
+div[type="PhotoAndForm"]
+{
+    position:static;
+	margin-left:1.5%;
+	width:98.5%;
+	height:500px;
+	//background-color:green;
+}
+div[type="imghouse"]
+{
+	height:500px;
+	width:45%;
+    //background-color:red;
+    float:left;
+}
+div[type="FORM"]
+{
+    height:500px;
+	width:55%;
+	float:left;
+}
+table[type="TABLE1"]
+{
+    border:#CDD9D9 solid 1px; 
+}
+input[type="submit"]
+{
+    height:80%;
+	width:40%;
+	font-size:1.2em;
+	border:#32D9D9 solid 1px;
+	background-color:#F5F5F5;
+}
+input[type="submit"]:hover
+{
+    background-color:#32D9D9;
+}
+
+div[type="split"]
+{
+    margin-top:0;
+	position:static;
+	width:100%;
+}
+div[type="foot"]
+{
+    margin-top:35px;
+	//margin-left:4.8%;
+	position:static;
+    height:150px;
+	width:100%;
+	text-align:left;
+	color:white;
+	font-size:1em;
+	background-color:#696969;
+}
+.tbl1
+{
+    text-align:left;
+	width:25%;
+}
+.tbl2
+{
+    text-align:left;
+	width:20%;
+}
+.tbl3
+{
+    text-align:left;
+	width:15%;
+}
+.tbl4
+{
+    text-align:left;
+	width:15%;
+}
+.tbl5
+{
+    text-align:left;
+	width:12.5%;
+}
+.tbl6
+{
+    text-align:left;
+	width:12.5%;
+}
+
+	</style>
+	</head>
+  <body>
+   <div type="outer">
+   
+   <div class="nav">
+
+   <a href=""><div class="logo"><img src="" height="60px" width="100%"></div></a>
+   <div class="ididid" id="navigate1">欢迎xxx </div>
+   <a href=""><div class="quit" id="navigate">个人中心</div></a>
+   <a href=""><div class="quit" id="navigate">退出登录</div></a>
+   </div>
+   
+   <div type="split">
+   <hr align="center" width="100%" size="1" color="#EAADEA">
+   </div>
+   
+   <div type="houseTitle">
+   <p type="houseNAME"><b>此处填写房屋名称</b><p>
+   <p type="houseADDR">此处填写房屋详细地址<p>
+   </div>
+   
+   <div type="PhotoAndForm">
+
+   <div type="imghouse">
+   <img src="house9.jpg" height="500px" width="100%">
+   </div>
+ 
+   <div type="FORM">
+   <table type="TABLE1" bgcolor="#FFFAFA" width="100%" height="500px">
+   
+   <tr>
+   
+   <td valign="top" height="17%" width="50%" style="word-wrap:break-word; word-break:break-all;">价格：<font size="5" color="#FF6EC7">XXX</font>元/天
+   <td rowspan="5" height="100%" width="50%" align="left" valign="top" style="word-wrap:break-word; word-break:break-all;">详细信息：<br>gggggggggg</td>
+   </tr>
+   <tr>
+   <td valign="top" height="17%" width="50%" align="left" valign="top" style="word-wrap:break-word; word-break:break-all;">开放时间：？？？</td></tr>
+   <tr>
+   
+   <td valign="top" height="24%" width="50%" style="word-wrap:break-word; word-break:break-all;">租房时间：<br><br><select name="year1">
+	<option value="2018">2018</option>
+	<option value="2019">2019</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	</select>
+	<select name="month1">
+	<option value="1m">1</option>
+	<option value="2m">2</option>
+	<option value="3m">3</option>
+	<option value="4m">4</option>
+	<option value="5m">5</option>
+	<option value="6m">6</option>
+	<option value="7m">7</option>
+	<option value="8m">8</option>
+	<option value="9m">9</option>
+	<option value="10m">10</option>
+	<option value="11m">11</option>
+	<option value="12m">12</option>
+	</select>
+	<select name="day1">
+	<option value="1d">1</option>
+	<option value="2d">2</option>
+	<option value="3d">3</option>
+	<option value="4d">4</option>
+	<option value="5d">5</option>
+	<option value="6d">6</option>
+	<option value="7d">7</option>
+	<option value="8d">8</option>
+	<option value="9d">9</option>
+	<option value="10d">10</option>
+	<option value="11d">11</option>
+	<option value="12d">12</option>
+	<option value="13d">13</option>
+	<option value="14d">14</option>
+	<option value="15d">15</option>
+	<option value="16d">16</option>
+	<option value="17d">17</option>
+	<option value="18d">18</option>
+	<option value="19d">19</option>
+	<option value="20d">20</option>
+	<option value="21d">21</option>
+	<option value="22d">22</option>
+	<option value="23d">23</option>
+	<option value="24d">24</option>
+	<option value="25d">25</option>
+	<option value="26d">26</option>
+	<option value="27d">27</option>
+	<option value="28d">28</option>
+	<option value="29d">29</option>
+	<option value="30d">30</option>
+	<option value="31d">31</option>
+	</select>
+	
+	--
+	<select name="year2">
+	<option value="2018">2018</option>
+	<option value="2019">2019</option>
+	<option value="2020">2020</option>
+	<option value="2021">2021</option>
+	</select>
+	<select name="month2">
+	<option value="1M">1</option>
+	<option value="2M">2</option>
+	<option value="3M">3</option>
+	<option value="4M">4</option>
+	<option value="5M">5</option>
+	<option value="6M">6</option>
+	<option value="7M">7</option>
+	<option value="8M">8</option>
+	<option value="9M">9</option>
+	<option value="10M">10</option>
+	<option value="11M">11</option>
+	<option value="12M">12</option>
+	</select>
+	<select name="day2">
+	<option value="1D">1</option>
+	<option value="2D">2</option>
+	<option value="3D">3</option>
+	<option value="4D">4</option>
+	<option value="5D">5</option>
+	<option value="6D">6</option>
+	<option value="7D">7</option>
+	<option value="8D">8</option>
+	<option value="9D">9</option>
+	<option value="10D">10</option>
+	<option value="11D">11</option>
+	<option value="12D">12</option>
+	<option value="13D">13</option>
+	<option value="14D">14</option>
+	<option value="15D">15</option>
+	<option value="16D">16</option>
+	<option value="17D">17</option>
+	<option value="18D">18</option>
+	<option value="19D">19</option>
+	<option value="20D">20</option>
+	<option value="21D">21</option>
+	<option value="22D">22</option>
+	<option value="23D">23</option>
+	<option value="24D">24</option>
+	<option value="25D">25</option>
+	<option value="26D">26</option>
+	<option value="27D">27</option>
+	<option value="28D">28</option>
+	<option value="29D">29</option>
+	<option value="30D">30</option>
+	<option value="31D">31</option>
+	</select>
+	</td></tr>
+	<tr>
+	<td valign="top" height="17%" width="50%" style="word-wrap:break-word; word-break:break-all;">
+	房型：此处填写房型
+	</td></tr>
+	<tr>
+	<td valign="top" height="10%" width="50%" style="word-wrap:break-word; word-break:break-all;">
+	独立空间：此处填写独立空间
+	</td></tr>
+	<tr>
+	<td valign="top" height="15%" width="50%">
+	<input type="submit" value="我要下单" style="cursor:pointer;" onclick="order()">
+	</td></tr>
+	</table>
+   </div>
+   </div>
+  
+  <div type="foot">
+   
+<table width="84%" style="margin-left:8%;" type="another" >
+<tr>
+<th class="tbl1">联系我们</th>
+<th class="tbl2">帮助中心</th>
+<th class="tbl3">公司信息</th>
+<th class="tbl4">合作网站</th>
+<th class="tbl5">扫码抽奖</th>
+<th class="tbl6"> APP下载</th>
+</tr>
+<tr>
+<td class="tbl1">QQ:459014917</td>
+<td class="tbl2">房屋审核规范</td>
+<td class="tbl3">免责声明</td>
+<td class="tbl4">蚂蚁短租</a></td>
+<td rowspan="3" class="tbl5"><img src="<%=basePath%>/images/erwei1.png" height="100px" width="80%"></td>
+<td rowspan="3" class="tbl6"><img src="<%=basePath%>/images/erwei.png" height="100px" width="80%"></td>
+</tr>
+<tr>
+<td>Wxid:SuperStrikerM10</td>
+<td>房客帮助手册</td>
+<td>加入我们</td>
+<td>AirBnb</td>
+</tr>
+<tr>
+<td class="tbl1">Tel:18813913873</td>
+<td class="tbl2">优质住房计划</td>
+<td class="tbl3">服务协议</td>
+<td class="tbl4">58同城</td>
+</tr>
+
+
+</table>
+
+</div>
+
+
+</div>
+  </body>
+</html>

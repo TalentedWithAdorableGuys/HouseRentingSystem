@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/regist.css" rel="stylesheet" type="text/css">
+<title>mail to</title>
+<style>
+form[type="mailto"]
+{
+    background: #F8F8FF ;
+    border:#357FC4 solid 1px;
+	border-bottom-color:#357FC4;
+    color:#575454;  
+    width:500px;
+    margin-top:120px ;
+	margin-left:300px;
+    font-size:15px;
+	position:fixed;
+}
+div[type="titlE"]
+{
+    background:#009FCC;
+    font-size:24px;
+    padding:5px;
+    color:white;
+}
+table[type="mail"]
+{
+    margin-left:20px ;
+	margin-top:0px;
+}
+input[type="text"]
+{
+    width:429px;
+	height:30px;
+	font-size:15px;
+}
+input[type="submit"]
+{
+    height:30px;
+	width:50px;
+}
+</style>
+</head>
+<body background="backgroundpic.jpg" style=" background-repeat:no-repeat;background-size:100% 100%; background-attachment: fixed;">
+<form type="mailto">
+<div type="titlE">
+<b>发送邮件</b>
+</div>
+<table type="mail" cellspacing="10px">
+<tr><td><input type="text" placeholder="填写邮件主题"></td></tr>
+<tr><td><input type="text" placeholder="填写收件人ID"></td></tr>
+<tr><td><textarea name="mailtxt" cols="50" rows="10" wrap="hard" placeholder="填写邮件正文"></textarea></td></tr>
+<tr><td><input type="submit" value="发送">&nbsp <input type="submit" value="返回"></td></tr>
+</table>
+</form>
+</body>
+</html>

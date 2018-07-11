@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>drop-down</title>
+<meta charset="utf-8">
+<style>
+  ul[type="cross"]{
+    list-style-type:none;
+    margin:0;
+	
+    padding:0;
+    overflow:hidden;
+    background-color:white;
+	height:220px;
+    position:absolute;
+	width:100%;
+  }
+  
+  li[type="wwww"]
+  {
+    float:left;
+	margin-left:180px;
+  }
+  
+  li a, .dropbtn
+  {
+    
+    display:inline-block;
+    color:grey;
+    text-align:center;
+    padding-top:20px;
+	padding-left:50px;
+	padding-right:50px;
+    text-decoration:none;
+	height:50px;
+  }
+  
+  li a:hover, .dropdown:hover
+  {
+    background-color:#C0D9D9;
+  }
+ 
+  .dropdown
+  {
+    display:inline-block;
+	
+  }
+  
+  .dropdown-content
+  {
+    display:none;
+    position:absolute;
+    background-color:#f9f9f9;
+    min-width:164px;
+    box-shadow:0px 8px 16px 0px rgba(0,0,0,0.2);
+	
+  }
+  
+  .dropdown-content a
+  {
+    color:black;
+    padding:3px 12px;
+    text-decoration:none;
+    display:block;
+  }
+  
+  .dropdown-content a:hover 
+  {
+    background-color: #f1f1f1;
+  }
+  
+  .dropdown:hover .dropdown-content
+  {
+    display:block;
+	position:absolute;
+  }
+  div[type="useradmin"]
+  {
+      margin-left:830px;
+  }
+div[type="logo"]
+{
+    margin-top:0px;
+	position:absolute;
+	
+}
+div[type="hr"]
+{
+    margin-top:62px;
+	position:absolute;
+	width:100%;
+}
+div[type="mainbody"]
+{
+    position:absolute;
+	width:100%;
+	height:1000px;
+	background-color:#007FFF;
+	margin-top:120px;
+
+}
+div[type="erweima"]
+{
+    margin-left:1060px;
+	margin-top:840px;
+	position:absolute;
+}
+div[type="erweima1"]
+{
+    margin-left:1180px;
+	margin-top:840px;
+	position:absolute;
+}
+div[type="foot"]
+{
+    margin-top:820px;
+    height:150px;
+	width:100%;
+	background-color:#2f4f2f;
+	position:absolute;
+	text-align:left;
+	color:white;
+	font-size:20px;
+	padding-top:5px;
+	padding-left:80px;
+}
+
+.p1
+{
+	display:inline-block; 
+	margin-top:72px;
+    position:absolute;
+}
+.UserAdmin{
+
+    //margin-top:55px;
+    position:absolute;
+	padding-top:5px;
+    background-color:#87CEFF;
+    color: white;
+    width:199px;
+	height:65px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	text-align:center;
+}
+.p1:hover .UserAdmin {
+    background-color:#00BFFF;
+}
+.p11
+{
+	display:inline-block;
+	margin-top:137px;
+	position:absolute;
+}
+.function1{
+   //margin-top:120px;
+	padding-top:3px;
+	position:absolute;
+    background-color: #4CAF50;
+    color: white;
+    width:199px;
+	height:40px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+	text-align:center;
+}
+.p11:hover .function1 {
+    background-color: #3e8e41;
+}
+.p12
+{
+	display:inline-block;
+	position:absolute;
+	margin-top:177px;
+}
+
+.p12:hover .function1 {
+    background-color: #3e8e41;
+}
+
+.p13
+{
+	display:inline-block;
+	position:absolute;
+	margin-top:217px;
+}
+
+.p13:hover .function1 {
+    background-color: #3e8e41;
+}
+
+.p2
+{
+	display:inline-block; 
+	margin-top:257px;
+    position:absolute;
+}
+
+.p2:hover .UserAdmin {
+    background-color:#00BFFF;
+}
+.p21
+{
+	display:inline-block;
+	margin-top:322px;
+	position:absolute;
+}
+
+.p21:hover .function1 {
+    background-color: #3e8e41;
+}
+.p22
+{
+	display:inline-block;
+	position:absolute;
+	margin-top:362px;
+}
+
+.p22:hover .function1 {
+    background-color: #3e8e41;
+}
+
+.p23
+{
+	display:inline-block;
+	position:absolute;
+	margin-top:402px;
+}
+
+.p23:hover .function1 {
+    background-color: #3e8e41;
+}	
+
+a {text-decoration:none;} 
+
+div[type="vertical"]
+{
+    margin-left:199px;
+	margin-top:64px;
+	position:absolute;
+} 
+.MAINCONTENT
+{
+    background-color:#FFFFF0;
+	margin-left:201px;
+	margin-top:72px;
+	position:absolute;
+	height:748px;
+	width:1140px;
+}
+table[type="allhouse"]
+{
+    border-collapse:collapse;
+	
+}
+table[type="alluser"]
+{
+    border-collapse:collapse;
+	
+}
+</style>
+<script>
+var i=-10001;
+var j=-10001;
+function show(id)
+{
+    document.getElementById("content1").style.display="none"
+    document.getElementById("content2").style.display="none"
+    document.getElementById("content3").style.display="none"
+    document.getElementById("content4").style.display="none"
+    document.getElementById("content5").style.display="none"
+    document.getElementById("content6").style.display="none"
+    document.getElementById(id).style.display=""
+}
+function showbutton1()
+{
+    if(i%2==0)
+	{
+	    document.getElementById("fun1").style.display=""
+        document.getElementById("fun2").style.display=""
+        document.getElementById("fun3").style.display=""
+	}
+	else
+	{
+	    document.getElementById("fun1").style.display="none"
+        document.getElementById("fun2").style.display="none"
+        document.getElementById("fun3").style.display="none"
+	}
+	i=i+1;
+}
+function showbutton2()
+{
+    if(j%2==0)
+	{
+	    document.getElementById("fun11").style.display=""
+        document.getElementById("fun21").style.display=""
+        document.getElementById("fun31").style.display=""
+	}
+	else
+	{
+	    document.getElementById("fun11").style.display="none"
+        document.getElementById("fun21").style.display="none"
+        document.getElementById("fun31").style.display="none"
+	}
+	j=j+1;
+}
+</script>
+</head>
+<body>
+
+
+
+
+<div type="navy">
+<ul type="cross">
+    <li type="wwww"><div class="dropdown" type="useradmin">
+    <a href="#" class="dropbtn" type="useradmin">AdminID</a>
+    <div class="dropdown-content" type="drop1">
+    
+    </div>
+  </div></li>
+  <li type="wwww1"><div class="dropdown">
+    <a href="#" class="dropbtn">退出登录</a>
+    <div class="dropdown-content">
+     
+    </div>
+  </div>
+  </li>
+ 
+</ul>
+</div>
+
+<div type="logo">
+<a href=""><img src="small-logo.jpg" height="70px" width="200px"></a>
+</div>
+
+<div type="hr">
+ <hr align="center" width="100%" color="#D9D9F3" size="2">
+</div>
+
+<div class="p1">
+
+<button class="UserAdmin" onclick="showbutton1()">用户管理</button></div>
+
+<div class="p11">
+<button class="function1" onclick="show('content1')" id="fun1">显示所有用户信息</button></div>
+</div>
+
+<div class="p12">
+<button class="function1" onclick="show('content2')" id="fun2">功能2</button></div>
+</div>
+
+<div class="p13">
+<button class="function1" onclick="show('content3')" id="fun3">功能3</button></div>
+</div>
+
+<div class="p2">
+<button class="UserAdmin" onclick="showbutton2()">房屋管理</button></div>
+  
+
+
+<div class="p21">
+<button class="function1" onclick="show('content4')" id="fun11">审核房屋</button></div>
+</div>
+
+<div class="p22">
+<button class="function1" onclick="show('content5')" id="fun21">显示所有房屋信息</button></div>
+</div>
+
+<div class="p23">
+<button class="function1" onclick="show('content6')" id="fun31">功能31</button></div>
+</div>
+
+<div type="vertical">
+<hr style="width:1;height:750px;" color="#D9D9F3"></hr>
+</div>
+
+<div class="MAINCONTENT" id="content1"><!--用户信息-->
+<!--
+<form type="ALLUSERINFO">
+<table type="alluser" width="1140" height="220" border= "1" cellspacing="1" 
+cellpadding="4" bgcolor="#FFFFF0" class="tabtop1" align="center"
+ style="margin-left:0px;word-wrap:break-word; word-break:break-all;">
+					<tr height="40" style="text-align: center;">
+						<td width="160px">用户名</td>
+						<td width="160px">UID</td>
+						<td width="160px">真实姓名</td>
+						<td width="160px">密码</td>
+						<td width="80px">性别</td>
+						<td width="240px">邮箱</td>
+						<td width="160px">电话</td>
+						
+					</tr>
+					<tr><td><td><td><td><td><td><td></tr>
+					<tr><td><td><td><td><td><td><td></tr>
+</form>
+-->
+</div>
+
+
+<div class="MAINCONTENT" id="content2">
+wfte
+</div>
+<div class="MAINCONTENT" id="content3">
+irly
+</div>
+<div class="MAINCONTENT" id="content4">
+btd
+</div>
+
+<div class="MAINCONTENT" id="content5"><!--房屋信息-->
+<form type="ALLHOUSEINFO">
+<table type="allhouse" width="1140" height="220" border= "1" cellspacing="1" 
+cellpadding="4" bgcolor="#FFFFF0" class="tabtop1" align="center"
+ style="margin-left:0px;word-wrap:break-word; word-break:break-all;">
+					<tr height="40" style="text-align: center;">
+						<td width="160px">房屋ID</td>
+						<td width="160px">房屋名</td>
+						<td width="50px">所在城市</td>
+						<td width="160px">房东</td>
+						<td width="160px">租客</td>
+						<td width="50px">状态</td>
+						<td width="400px">详细信息</td>
+						
+					</tr>
+					<tr><td><td><td><td><td><td><td></tr>
+					<tr><td><td><td><td><td><td><td></tr>
+</table>
+</form>
+</div>
+
+<div class="MAINCONTENT" id="content6">
+atrm
+</div>
+
+<div type="foot">
+   
+<table width="65%">
+<tr>
+<th>联系我们</th>
+<th>帮助中心</th>
+<th>公司信息</th>
+</tr>
+<tr>
+<td>QQ:459014917</td>
+<td>房屋审核规范</td>
+<td>免责声明</td>
+</tr>
+<tr>
+<td>Wxid:SuperStrikerM10</td>
+<td>房客帮助手册</td>
+<td>加入我们</td>
+</tr>
+<tr>
+<td>Tel:18813913873</td>
+<td>优质住房计划</td>
+<td>服务协议</td>
+</tr>
+
+</table>
+
+ </div>
+ <div type="erweima"><img src="erwei.png" height="100px" width="100px"></div>
+ <div type="erweima1"><img src="erwei1.png" height="100px" width="100px"></div>
+
+</body>
+</html>
